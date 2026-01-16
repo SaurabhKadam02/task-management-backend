@@ -58,7 +58,9 @@ CREATE TABLE users (
 
 &nbsp;   username VARCHAR(50) UNIQUE NOT NULL,
 
-&nbsp;   password VARCHAR(255) NOT NULL
+&nbsp;   password VARCHAR(255) NOT NULL,
+
+&nbsp;   email VARCHAR(255) 
 
 );
 
@@ -72,7 +74,13 @@ CREATE TABLE projects (
 
 &nbsp;   user\_id BIGINT NOT NULL,
 
+&nbsp;   description VARCHAR(255),
+
+    duration INT,
+
 &nbsp;   FOREIGN KEY (user\_id) REFERENCES users(id)
+
+&nbsp;   
 
 );
 
